@@ -3,5 +3,5 @@ __pycache__/
 *.py[cod]
 .venv
 .vscode
-bd.json
 fruya.log
+database/db.josn

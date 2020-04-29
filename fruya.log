@@ -1116,3 +1116,6 @@ DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): cotacoes.economia
 DEBUG:urllib3.connectionpool:http://cotacoes.economia.uol.com.br:80 "GET /ws/asset/2324/intraday?size=600&callback=uolfinancecallback0 HTTP/1.1" 200 None
 DEBUG:root:All ready to save YDUQ3.SA on data base.
 DEBUG:root:YDUQ3.SA save -> data base.
+INFO:root:----------28/04/2020 21:44:56----------------
+INFO:root:Start application
+DEBUG:root:Assests are listed to begin get data
