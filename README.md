@@ -1,14 +1,14 @@
-#B3IntradayData
+# B3IntradayData
 
 Aplicação Python para obteção de dados intraday de ações e derivativos da B3 de uma API da UOL Finance e gravar em uma base de dados MySql.
 
-##Pré-requisitos:
+## Pré-requisitos:
 a) Conhecimento básico em MySql.
 b) Conhecimento intermediário de Python.
 Instalação:
 
-###1) Instalar MySql na última versão
-###2) Executar seguintes scripts SQL para criação da base de dados e tabelas:
+### 1) Instalar MySql na última versão
+### 2) Executar seguintes scripts SQL para criação da base de dados e tabelas:
 ```sql
     SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
     SET AUTOCOMMIT = 0;
@@ -66,7 +66,7 @@ Instalação:
       ADD PRIMARY KEY (`id`);
     COMMIT;
 ```
-###4) Adicionar na pasta database o arquivo 'db.json' com o seguinte conteúdo:
+### 4) Adicionar na pasta database o arquivo 'db.json' com o seguinte conteúdo:
 
 ```json
 {
