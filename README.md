@@ -1,13 +1,17 @@
 # B3IntradayData
 
+[![Build Status](https://travis-ci.org/marretti/stock-market-b3.svg?branch=master)](https://travis-ci.org/marretti/stock-market-b3)
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/marretti/stock-market-b3/blob/master/LICENSE)
+
 Aplicação Python para obteção de dados intraday de ações e derivativos da B3 da API da UOL Finance e gravar em uma base de dados MySql.
 
 ## Pré-requisitos:
-a) Conhecimento básico em MySql.
-b) Conhecimento intermediário de Python.
-Instalação:
+#### a) Conhecimento básico em MySql.
+#### b) Conhecimento intermediário de Python.
 
-### 1) Instalar MySql na última versão
+## Instalação:
+
+### 1) Instalar MySql na última versão.
 ### 2) Executar seguintes scripts SQL para criação da base de dados e tabelas:
 ```sql
     SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
