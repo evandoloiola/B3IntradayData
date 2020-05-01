@@ -77,3 +77,20 @@ Instalação:
 
   }
 ```
+### 5) Inserir na tabela `trickers` os papeis que serão monitorados ao seu critério. 
+Obs.: Os dados id e tricker dos papéis podemos ser obtidos através da função "get_assets" do modulo "uol-api" na pasta "uol".
+
+```sql
+INSERT INTO `trickers` (`id`, `trickerBov`, `tricker`) VALUES
+(1545, 'ABEV3', 'ABEV3.SA'),
+(39, 'ALPA4', 'ALPA4.SA'),
+(1881, 'AZUL4', 'AZUL4.SA'),
+(1027, 'BOVA11', 'BOVA11.SA'),
+(192, 'CMIG4', 'CMIG4.SA'),
+(222, 'CSNA3', 'CSNA3.SA'),
+(283, 'EMBR3', 'EMBR3.SA'),
+(683, 'USIM5', 'USIM5.SA'),
+(775, 'VALE3', 'VALE3.SA'),
+(704, 'WEGE3', 'WEGE3.SA'),
+(2324, 'YDUQ3', 'YDUQ3.SA');
+```
