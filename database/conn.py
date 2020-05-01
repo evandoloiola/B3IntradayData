@@ -24,5 +24,18 @@ def connect_mysql():
     return conn
 
 def engine_mysql():
-    engine = create_engine('mysql+pymysql://webizyco_fruya:#Atualidade#13@185.201.10.16/webizyco_fruya')
+    ''' connect to mysql data base
+    Returns:
+        engine
+    '''
+
+    #load data base credencials from ./db.json
+    json_file ='/db.json' 
+    #load credencials
+    host = get(json_file).json()['host']
+    user = get(json_file).json()['user']
+    password = get(json_file).json()['password']
+    db = get(json_file).json()['db']
+    #create engine
+    engine = create_engine('mysql+pymysql://'user +':'+ password +'@' + host + '/' + db)
     return engine
