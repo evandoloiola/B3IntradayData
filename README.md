@@ -1,23 +1,74 @@
-# Introduction 
-TODO: Fruya is a AI project to give recomendations for act on B3 market. This recomendations are call of buy or sell brasilian assets our company.
-The main goal is rank the trickers as the probability of success of operation, here we are use the historical of calls, calculate the risk e send 
-point to start, stop gain and stop loss.
-On the future we'll send orders atumactily for market and managent all portifolio.
+Aplicação Python para obteção de dados intraday de ações e derivativos da B3 de uma API da UOL Finance e gravar em uma base de dados MySql.
 
-# Getting Started
-TODO: To run this code you'll need :
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Pré-requisitos:
+a) Conhecimento básico em MySql.
+b) Conhecimento intermediário de Python.
+Instalação:
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+1) Instalar MySql na última versão
+2) Executar seguintes scripts SQL para criação da base de dados e tabelas:
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+    SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+    SET AUTOCOMMIT = 0;
+    START TRANSACTION;
+    SET time_zone = "+00:00";
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+    --
+    -- Banco de dados: `B3Intraday`
+    --
+
+    -- --------------------------------------------------------
+
+    --
+    -- Estrutura da tabela `quotes`
+    --
+
+    CREATE TABLE `quotes` (
+      `index` bigint(20) DEFAULT NULL,
+      `date` bigint(20) DEFAULT NULL,
+      `price` double DEFAULT NULL,
+      `low` double DEFAULT NULL,
+      `high` double DEFAULT NULL,
+      `var` double DEFAULT NULL,
+      `varpct` double DEFAULT NULL,
+      `vol` double DEFAULT NULL,
+      `tricker` text DEFAULT NULL
+    ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+    -- --------------------------------------------------------
+
+    --
+    -- Estrutura da tabela `trickers`
+    --
+
+    CREATE TABLE `trickers` (
+      `id` int(11) NOT NULL,
+      `trickerBov` varchar(55) NOT NULL,
+      `tricker` varchar(55) NOT NULL
+    ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+    --
+    -- Índices para tabelas despejadas
+    --
+
+    --
+    -- Índices para tabela `quotes`
+    --
+    ALTER TABLE `quotes`
+      ADD KEY `ix_quotes_index` (`index`);
+
+    --
+    -- Índices para tabela `trickers`
+    --
+    ALTER TABLE `trickers`
+      ADD PRIMARY KEY (`id`);
+    COMMIT;
+
+4) Adicionar na pasta database o arquivo 'db.json' com o seguinte conteúdo:
+    {
+      "host":"ip ou nome servidor de dados",
+      "user":"usuário do banco de dados",
+      "password":"senha de acesso ao banco de dados",
+      "db":"nome do banco de dados"
+
+  }
