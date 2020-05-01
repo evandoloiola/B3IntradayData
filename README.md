@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/marretti/stock-market-b3.svg?branch=master)](https://travis-ci.org/marretti/stock-market-b3)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/marretti/stock-market-b3/blob/master/LICENSE)
 
-Aplicação Python para obteção de dados intraday de ações e derivativos da B3 da API da UOL Finance e gravar em uma base de dados MySql.
+Aplicação Python para obteção gratuíta (Free) de dados intraday de ações e derivativos da B3 sem necessidade de cadastro ou usuário através da API do site UOL Finance e gravar em uma base de dados MySql (MariaDB).
 
 ## Pré-requisitos:
 #### a) Conhecimento básico em MySql.
