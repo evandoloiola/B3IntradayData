@@ -37,5 +37,5 @@ def engine_mysql():
     password = get(json_file).json()['password']
     db = get(json_file).json()['db']
     #create engine
-    engine = create_engine('mysql+pymysql://'user +':'+ password +'@' + host + '/' + db)
+    engine = create_engine('mysql+pymysql://'+ user +':'+ password +'@' + host + '/' + db)
     return engine
